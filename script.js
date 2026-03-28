@@ -5,7 +5,7 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
     const imageFile = document.getElementById('imageFile').files[0];
 
     if (!videoFile || !imageFile) {
-        alert("レース動画とラップ表の画像の両方を選択してくれ！");
+        alert("レース動画とラップ表の画像の両方を選択してください");
         return;
     }
 
@@ -82,7 +82,7 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
             btn.disabled = false;
         };
 
-        btn.innerText = "等倍速で録画中...（動画が終わるまで待機）";
+        btn.innerText = "等倍速で録画中...（動画が終わるまでアプリを閉じないでください）";
         await audioCtx.resume();
         recorder.start();
         await video.play();
