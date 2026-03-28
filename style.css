@@ -1,0 +1,73 @@
+/* 画面全体の背景やフォントの設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f2f2f7; /* iOSの背景っぽい薄いグレー */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* 画面の中央に配置 */
+}
+
+/* アプリの画面（白いカード部分）の設定 */
+.app-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px; /* スマホの横幅に合わせる */
+    padding: 24px;
+    border-radius: 16px; /* 角を丸くする */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 軽い影をつける */
+}
+
+/* タイトルの設定 */
+h1 {
+    font-size: 22px;
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+/* 各入力項目のまとまり */
+p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* 入力欄の上の文字（ラベル） */
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+/* テキスト入力欄とファイル選択欄のデザイン */
+input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d1d6;
+    border-radius: 8px;
+    box-sizing: border-box; /* 枠線を幅に含める */
+    font-size: 16px; /* スマホでタップした時の勝手なズームを防ぐ */
+    background-color: #fafafa;
+}
+
+/* ボタンのデザイン */
+button {
+    width: 100%;
+    padding: 16px;
+    background-color: #007aff; /* iOSの標準的な青色 */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* ボタンを押した時のリアクション */
+button:active {
+    background-color: #005bb5;
+}

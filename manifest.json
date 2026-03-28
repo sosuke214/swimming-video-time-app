@@ -1,0 +1,15 @@
+{
+  "name": "水泳レース合成アプリ",
+  "short_name": "レース合成",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007BFF",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

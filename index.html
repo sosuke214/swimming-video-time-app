@@ -1,0 +1,47 @@
+
+
+
+<!--css付き-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水泳レース動画合成アプリ</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#007BFF">
+    <link rel="apple-touch-icon" href="icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="container">
+        <h1>レース動画合成アプリ</h1>
+        
+        <div class="form-group">
+            <label for="videoFile">レース動画を選ぶ:</label>
+            <input type="file" id="videoFile" accept="video/*">
+        </div>
+        
+        <div class="form-group">
+            <label for="imageFile">ラップ表の画像を選ぶ:</label>
+            <input type="file" id="imageFile" accept="image/*">
+        </div>
+
+        <button id="generateBtn">動画を生成する</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker 登録成功', reg))
+                    .catch(err => console.log('Service Worker 登録失敗', err));
+            });
+        }
+    </script>
+</body>
+</html>
